@@ -66,7 +66,7 @@ osoby.forEach((osoba) => {
 	// dodaj tyle komorek dla każdego naukowca ile jest lat pomiędzy pierwszym i ostatnim rokiem
 	for (let i = minRok; i <= maxRok; i++) {
 		const td = document.createElement("td");
-		// dodaj klase 'pelne' gdy rok jest większy (lub równy) od roku urodzenia i mniejszy (lub równy) od roku śmierci (czyli gdy naukowiec żyje)
+		// dodaj klasę 'pelne' gdy rok jest większy (lub równy) od roku urodzenia i mniejszy (lub równy) od roku śmierci (czyli gdy naukowiec żyje)
 		if (
 			osoba.dataUr.getFullYear() <= i &&
 			osoba.dataSm.getFullYear() >= i
