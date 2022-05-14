@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="author" content="Jakub Zawadzki" />
         <link rel="stylesheet" href="styl2.css" />
+        <script src="wydarzenia.js"></script>
         <title>Strona naukowa</title>
     </head>
     <body>
@@ -20,34 +21,13 @@
                 </h3>
                 <p>
                     urodzony 25 grudnia 1642 - zmarł między 20 i 31 marca 1727
+                    <button>
+                        <a href="https://pl.wikipedia.org/wiki/Isaac_Newton"
+                            >więcej</a
+                        >
+                    </button>
                 </p>
-                <table>
-                    <tr>
-                        <td>1666</td>
-                        <td>
-                            według jego własnej oceny, rok ten był
-                            najważniejszym czasem w jego życiu. W związku z
-                            panującą zarazą musiał wrócić z Cambridge do
-                            rodzinnego domu. W tym czasie przymusowego urlopu
-                            dokonał swoich najważniejszych odkryć. Rok ten
-                            nazwał „annus mirabilis”.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1668</td>
-                        <td>
-                            uzyskał stopień magistra, a rok później objął
-                            stanowisko nauczyciela matematyki uniwersytetu w
-                            Cambridge. Następnie w latach 1670-72 wykładał
-                            optykę. W roku 1672 został członkiem elitarnego
-                            Towarzystwa Królewskiego. Z ramienia uniwersytetu w
-                            Cambridge został posłem do Izby Gmin, jednak jego
-                            brak aktywności był dobitny. Jako anegdotę należy
-                            podać, że zabrał głos tylko raz, prosząc o
-                            zamknięcie okna.
-                        </td>
-                    </tr>
-                </table>
+                <ol class="menu menu-daty"></ol>
             </div>
             <div class="zdjecie">
                 <img
@@ -57,5 +37,18 @@
                 <span>Isaac Newton</span>
             </div>
         </div>
+        <table id="tabela"></table>
+        <script>
+            wypiszWydarzenia([
+                {
+                    rok: "1666",
+                    tresc: "według jego własnej oceny, rok ten był najważniejszym czasem w jego życiu. W związku z panującą zarazą musiał wrócić z Cambridge do rodzinnego domu. W tym czasie przymusowego urlopu dokonał swoich najważniejszych odkryć. Rok ten nazwał „annus mirabilis”.",
+                },
+                {
+                    rok: "1668",
+                    tresc: "uzyskał stopień magistra, a rok później objął stanowisko nauczyciela matematyki uniwersytetu w Cambridge. Następnie w latach 1670-72 wykładał optykę. W roku 1672 został członkiem elitarnego Towarzystwa Królewskiego. Z ramienia uniwersytetu w Cambridge został posłem do Izby Gmin, jednak jego brak aktywności był dobitny. Jako anegdotę należy podać, że zabrał głos tylko raz, prosząc o zamknięcie okna.",
+                },
+            ]);
+        </script>
     </body>
 </html>

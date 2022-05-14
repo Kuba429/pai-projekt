@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="author" content="Jakub Zawadzki" />
         <link rel="stylesheet" href="styl2.css" />
+        <script src="wydarzenia.js"></script>
         <title>Strona naukowa</title>
     </head>
     <body>
@@ -16,53 +17,16 @@
                     Banacha. Zajmował się też teorią mnogości, w której podał
                     paradoks rozkładu kuli.
                 </h3>
-                <p>urodzony 30 marca 1892 - zmarł 31 sierpnia 1945</p>
-                <table>
-                    <tr>
-                        <td>1916</td>
-                        <td>
-                            dr Hugo Steinhaus zainteresował się przypadkowo
-                            spotkanym Banachem (przechodząc Plantami w Krakowie,
-                            usłyszał dwóch młodych ludzi rozmawiających o całce
-                            Lebesgue’a, zagadnieniu z zaawansowanej teorii miary
-                            i całki; byli to Banach i Otton Nikodym). Spotkanie
-                            zaowocowało wspólną publikacją i wieloletnią
-                            współpracą. W 1920 dzięki wstawiennictwu Steinhausa
-                            Banach otrzymał asystenturę (do 1922) w Katedrze
-                            Matematyki na Wydziale Mechanicznym Politechniki
-                            Lwowskiej u prof. Antoniego Łomnickiego.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1924</td>
-                        <td>
-                            został członkiem Polskiej Akademii Umiejętności. W
-                            latach 1922–1939 kierował jednym z zakładów w
-                            Instytucie Matematycznym Uniwersytetu Jana
-                            Kazimierza, rozwijając wielką działalność
-                            naukowo-badawczą. Stał się wkrótce największym
-                            autorytetem w analizie funkcjonalnej. Dookoła niego
-                            skoncentrowała się plejada młodych talentów dając
-                            początek lwowskiej szkole matematyczne
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1932</td>
-                        <td>
-                            ukazało się w druku słynne dzieło Banacha Théorie
-                            des opérations linéaires jako pierwszy tom nowego
-                            wydawnictwa Monografie Matematyczne, którego był
-                            jednym z założycieli. Dzieło to przyczyniło się w
-                            dużym stopniu do spopularyzowania osiągnięć Banacha
-                            wśród ogółu matematyków i do rozwoju analizy
-                            funkcjonalnej. O zainteresowaniu świata
-                            matematycznego osobą Banacha świadczy między innymi
-                            fakt powierzenia mu jednego z odczytów plenarnych na
-                            Międzynarodowym Kongresie Matematycznym w Oslo w
-                            1936.
-                        </td>
-                    </tr>
-                </table>
+                <p>
+                    urodzony 30 marca 1892 - zmarł 31 sierpnia 1945
+                    <button>
+                        <a href="https://pl.wikipedia.org/wiki/Stefan_Banach"
+                            >więcej</a
+                        >
+                    </button>
+                </p>
+
+                <ol class="menu menu-daty"></ol>
             </div>
             <div class="zdjecie">
                 <img
@@ -72,5 +36,22 @@
                 <span>Stefan Banach</span>
             </div>
         </div>
+        <table id="tabela"></table>
+        <script>
+            wypiszWydarzenia([
+                {
+                    rok: "1916",
+                    tresc: "dr Hugo Steinhaus zainteresował się przypadkowo spotkanym Banachem (przechodząc Plantami w Krakowie, usłyszał dwóch młodych ludzi rozmawiających o całce Lebesgue’a, zagadnieniu z zaawansowanej teorii miary i całki; byli to Banach i Otton Nikodym). Spotkanie zaowocowało wspólną publikacją i wieloletnią współpracą. W 1920 dzięki wstawiennictwu Steinhausa Banach otrzymał asystenturę (do 1922) w Katedrze Matematyki na Wydziale Mechanicznym Politechniki Lwowskiej u prof. Antoniego Łomnickiego.",
+                },
+                {
+                    rok: "1924",
+                    tresc: "został członkiem Polskiej Akademii Umiejętności. W latach 1922–1939 kierował jednym z zakładów w Instytucie Matematycznym Uniwersytetu Jana Kazimierza, rozwijając wielką działalność naukowo-badawczą. Stał się wkrótce największym autorytetem w analizie funkcjonalnej. Dookoła niego skoncentrowała się plejada młodych talentów dając początek lwowskiej szkole matematyczne",
+                },
+                {
+                    rok: "1932",
+                    tresc: "ukazało się w druku słynne dzieło Banacha Théorie des opérations linéaires jako pierwszy tom nowego wydawnictwa Monografie Matematyczne, którego był jednym z założycieli. Dzieło to przyczyniło się w dużym stopniu do spopularyzowania osiągnięć Banacha wśród ogółu matematyków i do rozwoju analizy funkcjonalnej. O zainteresowaniu świata matematycznego osobą Banacha świadczy między innymi fakt powierzenia mu jednego z odczytów plenarnych na Międzynarodowym Kongresie Matematycznym w Oslo w 1936.",
+                },
+            ]);
+        </script>
     </body>
 </html>
