@@ -1,0 +1,65 @@
+body {
+    background-color: beige;
+    margin: 10px;
+}
+h1 {
+    color: brown;
+    font-size: 48px;
+    letter-spacing: 3px;
+    font-family: Vivaaldi;
+    font-weight: bolder;
+    text-align: center;
+}
+a {
+    color: #008800;
+}
+ul {
+    list-style: circle;
+}
+menu {
+    list-style-type: none;
+}
+menu li a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 50px;
+    background-color: pink;
+    opacity: 0.7;
+    font-style: italic;
+    font-size: 15px;
+    height: 50px;
+    width: 200px;
+}
+footer {
+    background-color: brown;
+    color: white;
+    font-size: 12px;
+}
+
+.wrapper {
+    overflow-x: auto;
+}
+table {
+    border: 2px solid black;
+    font-size: 13px;
+    font-style: italic;
+    font-family: Verdana;
+    border-spacing: 0;
+    --kolor: darkblue;
+    color: var(--kolor);
+}
+table tr th {
+    white-space: nowrap;
+}
+.rok {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    padding: 0;
+}
+.pelne {
+    background-color: var(--kolor);
+}
