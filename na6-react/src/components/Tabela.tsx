@@ -42,8 +42,8 @@ const Wiersz: React.FC<{ osoba: naukowiec; lata: Array<number> }> = ({
                     <td
                         key={uuidv4()}
                         className={
-                            rok > osoba.dataUr.getFullYear() &&
-                            rok < osoba.dataSm.getFullYear()
+                            rok >= osoba.dataUr.getFullYear() &&
+                            rok <= osoba.dataSm.getFullYear()
                                 ? "zamal"
                                 : ""
                         }
@@ -58,8 +58,8 @@ function znajdzLata(osoby: Array<naukowiec>): Array<number> {
     osoby.forEach((osoba) => {
         const rokUrodzenia = osoba.dataUr.getFullYear();
         const rokSmierci = osoba.dataSm.getFullYear();
-        if (rokUrodzenia < min) min = rokUrodzenia;
-        if (rokSmierci > max) max = rokSmierci;
+        if (rokUrodzenia <= min) min = rokUrodzenia - 1;
+        if (rokSmierci >= max) max = rokSmierci + 2;
     });
     const lata: Array<number> = [];
     for (let i = min; i < max; i++) {
