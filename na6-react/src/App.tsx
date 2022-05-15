@@ -1,13 +1,15 @@
 import { Container } from "react-bootstrap";
 import { Menu } from "./components/Menu";
+import { Tabela } from "./components/Tabela";
 import dane from "./dane";
 
 function App() {
     return (
-        <div className="App container">
+        <Container className="App">
             <h1>Wielcy Naukowcy</h1>
             <Menu dane={dane} />
-        </div>
+            <Tabela dane={dane} />
+        </Container>
     );
 }
 
