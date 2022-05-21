@@ -1,17 +1,16 @@
-import { Container } from "react-bootstrap";
+import { Route, Routes } from "react-router-dom";
 import { Footer } from "./components/Footer";
-import { Menu } from "./components/Menu";
-import { Tabela } from "./components/Tabela";
-import dane from "./dane";
+import { Naukowiec } from "./components/Naukowiec/Naukowiec";
+import { StronaGlowna } from "./components/StronaGlowna";
 
 function App() {
     return (
         <div className="App d-flex flex-column">
-            <Container className="my-5">
-                <h1>Wielcy Naukowcy</h1>
-                <Menu dane={dane} />
-                <Tabela dane={dane} />
-            </Container>
+            <Routes>
+                <Route path="/" element={<StronaGlowna />} />
+                <Route path="/:id" element={<Naukowiec />} />
+            </Routes>
+
             <Footer />
         </div>
     );
