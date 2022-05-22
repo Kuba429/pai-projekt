@@ -5,7 +5,7 @@ import { naukowiec } from "../dane";
 export const Tabela: React.FC<{ dane: Array<naukowiec> }> = ({ dane }) => {
     const lata: Array<number> = znajdzLata(dane);
     return (
-        <div className="overflow-auto">
+        <div className="overflow-auto my-3">
             <table>
                 <tbody>
                     <>

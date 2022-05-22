@@ -6,6 +6,7 @@ export interface naukowiec {
     wikipedia: string;
     zdjecie: string;
     ciekawostka: string;
+    opis: string;
 }
 const naukowcy: Array<naukowiec> = [
     {
@@ -18,6 +19,7 @@ const naukowcy: Array<naukowiec> = [
         zdjecie:
             "https://bi.im-g.pl/im/f3/d2/19/z27076339ICR,Maria-Sklodowska-Curie.jpg",
         ciekawostka: "Maria poszła do szkoły dopiero w wieku 10 lat",
+        opis: "Należy do grona jedynie czterech osób, które otrzymały Nagrodę Nobla więcej niż raz. Wśród nich jest jedną z dwóch, które otrzymały nagrody w różnych dyscyplinach.",
     },
     {
         nazwisko: "Albert Einstein",
@@ -29,6 +31,7 @@ const naukowcy: Array<naukowiec> = [
             "https://bi.im-g.pl/im/99/d6/ff/z16766617IBG,Albert-Einstein.jpg",
         ciekawostka:
             "W 2001 roku tygodnik „Time” uznał Einsteina za „człowieka stulecia”.",
+        opis: "Twórca szczególnej teorii względności, która ulepszyła mechanikę Newtona i zastąpiła w tej korekcyjnej roli teorię eteru Lorentza. Autor wynikającej z STW równoważności masy i energii, czasem formułowanej słynnym wzorem E = mc2.",
     },
     {
         nazwisko: "Isaac Newton",
@@ -39,6 +42,7 @@ const naukowcy: Array<naukowiec> = [
         zdjecie: "https://quotepark.com/media/authors/isaac-newton.jpeg",
         ciekawostka:
             "Newton nienawidził swojego ojczyma i groził mu podpaleniem jego domu.",
+        opis: "Newton zasłynął przede wszystkim jako fizyk – zarówno doświadczalny, jak i teoretyczny. Zajmował się głównie klasyczną mechaniką – w tym mechaniką ośrodków ciągłych, zwłaszcza płynów – oraz grawitacją i optyką, zahaczając też o termodynamikę, geofizykę, badania Kosmosu i fizykę matematyczną.",
     },
     {
         nazwisko: "Stefan Banach",
@@ -50,6 +54,7 @@ const naukowcy: Array<naukowiec> = [
             "https://upload.wikimedia.org/wikipedia/commons/5/51/Stefana_Banach_-_ستيفان_بناخ.jpg",
         ciekawostka:
             " Był samoukiem w dziedzinie matematyki, ale dorównywał wiedzą naukowcom na poziomie uniwersyteckim",
+        opis: "Jeden z pionierów i klasyków analizy funkcjonalnej, znany m.in. z opisania twierdzenia o kontrakcji i przestrzeni Banacha. Zajmował się też teorią mnogości, w której podał paradoks rozkładu kuli.",
     },
     {
         nazwisko: "Ignacy Łukasiewicz",
@@ -61,6 +66,7 @@ const naukowcy: Array<naukowiec> = [
             "https://upload.wikimedia.org/wikipedia/commons/9/92/Ignacy_Lukasiewicz.jpg",
         ciekawostka:
             "Działalność Ignacego Łukasińskiego zapoczątkowała rozwój przemysłu naftowego w Polsce.",
+        opis: "Jako pierwszy na świecie wykorzystał na skalę przemysłową korzyści, jakie daje ropa naftowa. Bardzo sprawny organizator, z czasem dorobił się na ropie naftowej dużego majątku.",
     },
 ];
 
