@@ -10,7 +10,6 @@ function App() {
                 <Route path="/" element={<StronaGlowna />} />
                 <Route path="/:id" element={<Naukowiec />} />
             </Routes>
-
             <Footer />
         </div>
     );
