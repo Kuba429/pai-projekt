@@ -1,8 +1,7 @@
 import Helmet from "react-helmet";
 import { useParams } from "react-router-dom";
 import naukowcy, { naukowiec } from "../../dane";
-import { Kolumna3 } from "./Kolumna1";
-import { Kolumna1, Kolumna2 } from "./Kolumny";
+import { Kolumna1, Kolumna2, Kolumna3 } from "./Kolumny";
 export const Naukowiec = () => {
     const { id } = useParams();
     const naukowiec: naukowiec = naukowcy.find((x) => x.id == id)!;

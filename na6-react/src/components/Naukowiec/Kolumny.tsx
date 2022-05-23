@@ -26,6 +26,22 @@ export const Kolumna2: FC<{ opis: string }> = ({ opis }) => {
         </div>
     );
 };
+export const Kolumna3: FC<{ zdjecie: string; nazwisko: string }> = ({
+    zdjecie,
+    nazwisko,
+}) => {
+    console.log(zdjecie);
+    return (
+        <div className="col-12 col-md-4 d-flex flex-column align-items-center">
+            <img
+                className="width-auto img-fluid"
+                src={zdjecie}
+                alt="zdjęcie naukowca"
+            />
+            <p className="text-center">{nazwisko}</p>
+        </div>
+    );
+};
 
 function znajdzWiek(naukowiec: naukowiec) {
     const roznica = naukowiec.dataSm.getTime()! - naukowiec.dataUr.getTime()!;
