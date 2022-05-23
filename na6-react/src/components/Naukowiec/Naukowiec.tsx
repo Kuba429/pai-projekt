@@ -1,7 +1,8 @@
 import Helmet from "react-helmet";
 import { useParams } from "react-router-dom";
 import naukowcy, { naukowiec } from "../../dane";
-import { Kolumna1 } from "./Kolumna1";
+import { Kolumna3 } from "./Kolumna1";
+import { Kolumna1, Kolumna2 } from "./Kolumny";
 export const Naukowiec = () => {
     const { id } = useParams();
     const naukowiec: naukowiec = naukowcy.find((x) => x.id == id)!;
@@ -16,17 +17,11 @@ export const Naukowiec = () => {
             <div className="container">
                 <div className="row">
                     <Kolumna1 naukowiec={naukowiec} />
-                    <div className="col-12 col-md-4 text-center d-flex align-items-center">
-                        {naukowiec?.opis}
-                    </div>
-                    <div className="col-12 col-md-4 d-flex flex-column align-items-center">
-                        <img
-                            className="width-auto img-fluid"
-                            src={naukowiec?.zdjecie}
-                            alt="zdjęcie naukowca"
-                        />
-                        <p className="text-center">{naukowiec?.nazwisko}</p>
-                    </div>
+                    <Kolumna2 opis={naukowiec.opis} />
+                    <Kolumna3
+                        zdjecie={naukowiec.zdjecie}
+                        nazwisko={naukowiec.nazwisko}
+                    />
                 </div>
             </div>
         </>
