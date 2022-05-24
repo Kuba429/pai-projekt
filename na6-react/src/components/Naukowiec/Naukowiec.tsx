@@ -17,7 +17,10 @@ export const Naukowiec = () => {
                 <div className="container mb-5">
                     <div className="row">
                         <Kolumna1 naukowiec={naukowiec} />
-                        <Kolumna2 opis={naukowiec.opis} />
+                        <Kolumna2
+                            ciekawostka={naukowiec.ciekawostka}
+                            opis={naukowiec.opis}
+                        />
                         <Kolumna3
                             zdjecie={naukowiec.zdjecie}
                             nazwisko={naukowiec.nazwisko}

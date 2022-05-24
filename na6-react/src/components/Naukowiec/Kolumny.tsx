@@ -33,10 +33,21 @@ export const Kolumna1: FC<{ naukowiec: naukowiec }> = ({ naukowiec }) => {
         </div>
     );
 };
-export const Kolumna2: FC<{ opis: string }> = ({ opis }) => {
+export const Kolumna2: FC<{ opis: string; ciekawostka: string }> = ({
+    opis,
+    ciekawostka,
+}) => {
     return (
-        <div className="col-12 col-md-4 text-center d-flex align-items-center">
+        <div className="col-12 col-md-4 text-center d-flex flex-column align-items-center justify-content-center">
             {opis}
+            <button
+                onClick={() => {
+                    alert(ciekawostka);
+                }}
+                className="btn border"
+            >
+                <img src="lightbulb-bold.svg" width="30" alt="ciekawostka" />
+            </button>
         </div>
     );
 };
