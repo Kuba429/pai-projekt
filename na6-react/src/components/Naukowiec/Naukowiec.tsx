@@ -10,24 +10,22 @@ export const Naukowiec = () => {
 
     return (
         <>
-            <>
-                <Helmet>
-                    <title>{naukowiec?.nazwisko}</title>
-                </Helmet>
-                <Layout header={naukowiec?.nazwisko}>
-                    <div className="container">
-                        <div className="row">
-                            <Kolumna1 naukowiec={naukowiec} />
-                            <Kolumna2 opis={naukowiec.opis} />
-                            <Kolumna3
-                                zdjecie={naukowiec.zdjecie}
-                                nazwisko={naukowiec.nazwisko}
-                            />
-                        </div>
-                        <Wydarzenia wydarzenia={naukowiec.wydarzenia} />
+            <Helmet>
+                <title>{naukowiec?.nazwisko}</title>
+            </Helmet>
+            <Layout header={naukowiec?.nazwisko}>
+                <div className="container mb-5">
+                    <div className="row">
+                        <Kolumna1 naukowiec={naukowiec} />
+                        <Kolumna2 opis={naukowiec.opis} />
+                        <Kolumna3
+                            zdjecie={naukowiec.zdjecie}
+                            nazwisko={naukowiec.nazwisko}
+                        />
                     </div>
-                </Layout>
-            </>
+                    <Wydarzenia wydarzenia={naukowiec.wydarzenia} />
+                </div>
+            </Layout>
         </>
     );
 };
