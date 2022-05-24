@@ -4,7 +4,6 @@ import { naukowiec } from "../../dane";
 export const Kolumna1: FC<{ naukowiec: naukowiec }> = ({ naukowiec }) => {
     const dataUrodzeniaFormat = ` ${naukowiec?.dataUr.getDay()}.${naukowiec?.dataUr.getMonth()}.${naukowiec?.dataUr.getFullYear()}`;
     const dataSmierciFormat = ` ${naukowiec?.dataSm.getDay()}.${naukowiec?.dataSm.getMonth()}.${naukowiec?.dataSm.getFullYear()}`;
-    const wiek = znajdzWiek(naukowiec);
     const [wiekState, setWiekState] = useState("");
     return (
         <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
@@ -17,7 +16,7 @@ export const Kolumna1: FC<{ naukowiec: naukowiec }> = ({ naukowiec }) => {
                 <br />
                 {wiekState.length > 0 ? (
                     <>
-                        Wiek: <span className="lead">{wiek}</span>
+                        Wiek: <span className="lead">{wiekState}</span>
                     </>
                 ) : (
                     <button
