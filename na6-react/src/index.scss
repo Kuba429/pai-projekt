@@ -1,3 +1,22 @@
+// zmiana koloru tła
+body {
+    background-color: white;
+}
+body[data-kolor="white"] {
+    background-color: white;
+}
+body[data-kolor="yellow"] {
+    background-color: yellow;
+}
+body[data-kolor="blue"] {
+    background-color: blue;
+}
+body[data-kolor="green"] {
+    background-color: green;
+}
+body[data-kolor="aqua"] {
+    background-color: aqua;
+}
 .App {
     min-height: 100vh;
 }
