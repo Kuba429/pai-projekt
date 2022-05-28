@@ -1,5 +1,6 @@
 /* @refresh reload */
 import "bootstrap/scss/bootstrap.scss";
+import "bootstrap-icons/font/bootstrap-icons.scss";
 import "./index.scss";
 import { render } from "solid-js/web";
 import { Router } from "solid-app-router";
