@@ -1,27 +1,25 @@
-import React from "react";
-
 const kolory = ["white", "yellow", "blue", "green", "aqua"];
-export const ZmianaKoloru = () => {
+export const ZmianaTla = () => {
     return (
-        <div className="zmiana-tla container d-flex justify-content-end gap-2 my-2">
+        <div class="zmiana-tla container d-flex justify-content-end gap-2 my-2">
             {kolory.map((kolor) => {
                 return (
-                    <React.Fragment key={kolor}>
+                    <>
                         <input
                             onInput={() => zmienKolor(kolor)}
-                            className="btn-check"
-                            defaultChecked={kolor == "white"}
+                            class="btn-check"
+                            checked={kolor == "white"}
                             type="radio"
                             name="kolor"
                             id={kolor}
                         />
                         <label
-                            className="btn btn-outline-secondary btn-sm"
-                            htmlFor={kolor}
+                            class="btn btn-outline-secondary btn-sm"
+                            for={kolor}
                         >
                             {kolor}
                         </label>
-                    </React.Fragment>
+                    </>
                 );
             })}
         </div>

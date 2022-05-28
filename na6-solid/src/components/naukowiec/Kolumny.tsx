@@ -1,29 +1,31 @@
-import { FC, useState } from "react";
+import { Component, createSignal } from "solid-js";
 import { naukowiec } from "../../dane";
 
-export const Kolumna1: FC<{ naukowiec: naukowiec }> = ({ naukowiec }) => {
+export const Kolumna1: Component<{ naukowiec: naukowiec }> = ({
+    naukowiec,
+}) => {
     const dataUrodzeniaFormat = ` ${naukowiec?.dataUr.getDay()}.${naukowiec?.dataUr.getMonth()}.${naukowiec?.dataUr.getFullYear()}`;
     const dataSmierciFormat = ` ${naukowiec?.dataSm.getDay()}.${naukowiec?.dataSm.getMonth()}.${naukowiec?.dataSm.getFullYear()}`;
-    const [wiekState, setWiekState] = useState("");
+    const [wiekSignal, setWiekSignal] = createSignal("");
     return (
-        <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
-            <p className="text-center">
+        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+            <p class="text-center">
                 Data urodzenia:
-                <span className="lead">{dataUrodzeniaFormat}</span>
+                <span class="lead">{dataUrodzeniaFormat}</span>
                 <br />
                 Data śmierci:
-                <span className="lead">{dataSmierciFormat}</span>
+                <span class="lead">{dataSmierciFormat}</span>
                 <br />
-                {wiekState.length > 0 ? (
+                {wiekSignal().length > 0 ? (
                     <>
-                        Wiek: <span className="lead">{wiekState}</span>
+                        Wiek: <span class="lead">{wiekSignal()}</span>
                     </>
                 ) : (
                     <button
                         onClick={() => {
-                            setWiekState(znajdzWiek(naukowiec).toString());
+                            setWiekSignal(znajdzWiek(naukowiec).toString());
                         }}
-                        className="btn btn-secondary"
+                        class="btn btn-secondary"
                     >
                         Oblicz wiek
                     </button>
@@ -32,36 +34,37 @@ export const Kolumna1: FC<{ naukowiec: naukowiec }> = ({ naukowiec }) => {
         </div>
     );
 };
-export const Kolumna2: FC<{ opis: string; ciekawostka: string }> = ({
+
+export const Kolumna2: Component<{ opis: string; ciekawostka: string }> = ({
     opis,
     ciekawostka,
 }) => {
     return (
-        <div className="col-12 col-md-4 text-center d-flex flex-column align-items-center justify-content-center">
+        <div class="col-12 col-md-4 text-center d-flex flex-column align-items-center justify-content-center">
             {opis}
             <button
                 onClick={() => {
                     alert(ciekawostka);
                 }}
-                className="btn border"
+                class="btn border"
             >
                 <img src="lightbulb-bold.svg" width="30" alt="ciekawostka" />
             </button>
         </div>
     );
 };
-export const Kolumna3: FC<{ zdjecie: string; nazwisko: string }> = ({
+export const Kolumna3: Component<{ zdjecie: string; nazwisko: string }> = ({
     zdjecie,
     nazwisko,
 }) => {
     return (
-        <div className="col-12 col-md-4 d-flex flex-column align-items-center">
+        <div class="col-12 col-md-4 d-flex flex-column align-items-center">
             <img
-                className="width-auto img-fluid"
+                class="width-auto img-fluid"
                 src={zdjecie}
                 alt="zdjęcie naukowca"
             />
-            <p className="text-center">{nazwisko}</p>
+            <p class="text-center">{nazwisko}</p>
         </div>
     );
 };
