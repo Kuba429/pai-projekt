@@ -7,7 +7,7 @@ export const Wydarzenia: Component<{ wydarzenia: Array<wydarzenie> }> = ({
 }) => {
     return (
         <>
-            <div class="accordion accordion-flush" id={parentId}>
+            <div class="accordion " id={parentId}>
                 {wydarzenia.map((wydarzenie, i) => {
                     // index potrzebny do id
                     return <AccordionItem index={i} wydarzenie={wydarzenie} />;

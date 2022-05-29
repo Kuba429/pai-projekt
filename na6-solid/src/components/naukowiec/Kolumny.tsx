@@ -46,7 +46,7 @@ export const Kolumna2: Component<{ opis: string; ciekawostka: string }> = ({
                 onClick={() => {
                     alert(ciekawostka);
                 }}
-                class="btn border"
+                class="btn bg-secondary text-white"
             >
                 <img src="lightbulb-bold.svg" width="30" alt="ciekawostka" />
             </button>
