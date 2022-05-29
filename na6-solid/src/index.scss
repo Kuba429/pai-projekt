@@ -1,21 +1,24 @@
 // zmiana koloru tła
 body {
-    background-color: white;
+    --tlo: white;
 }
 body[data-kolor="white"] {
-    background-color: white;
+    --tlo: white;
 }
 body[data-kolor="yellow"] {
-    background-color: yellow;
+    --tlo: rgb(251, 251, 144);
 }
 body[data-kolor="blue"] {
-    background-color: blue;
+    --tlo: rgb(65, 157, 255);
 }
 body[data-kolor="green"] {
-    background-color: green;
+    --tlo: rgb(148, 255, 148);
 }
 body[data-kolor="aqua"] {
-    background-color: aqua;
+    --tlo: rgb(124, 255, 255);
+}
+body {
+    background-color: var(--tlo);
 }
 .App {
     min-height: 100vh;
@@ -38,7 +41,7 @@ table {
         .podpis {
             position: sticky;
             left: 0;
-            background: white;
+            background: var(--tlo);
             white-space: nowrap;
         }
     }
