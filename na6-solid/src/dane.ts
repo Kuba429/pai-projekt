@@ -1,5 +1,6 @@
 export interface naukowiec {
     nazwisko: string;
+    nazwiskoDopelniacz: string;
     id: string;
     dataUr: Date;
     dataSm: Date;
@@ -16,6 +17,7 @@ export interface wydarzenie {
 const naukowcy: Array<naukowiec> = [
     {
         nazwisko: "Maria Skłodowska-Curie",
+        nazwiskoDopelniacz: "Marii Skłodowskiej-Curie",
         id: "maria",
         // numery miesięcy są liczone od 0; np. 10 == listopad
         dataUr: new Date(1867, 10, 7),
@@ -42,6 +44,7 @@ const naukowcy: Array<naukowiec> = [
     },
     {
         nazwisko: "Albert Einstein",
+        nazwiskoDopelniacz: "Alberta Einsteina",
         id: "albert",
         dataUr: new Date(1879, 2, 14),
         dataSm: new Date(1955, 3, 18),
@@ -68,6 +71,7 @@ const naukowcy: Array<naukowiec> = [
     },
     {
         nazwisko: "Isaac Newton",
+        nazwiskoDopelniacz: "Isaaca Newtona",
         id: "isaac",
         dataUr: new Date(1642, 11, 25),
         dataSm: new Date(1727, 2, 20),
@@ -89,6 +93,7 @@ const naukowcy: Array<naukowiec> = [
     },
     {
         nazwisko: "Stefan Banach",
+        nazwiskoDopelniacz: "Stefana Banacha",
         id: "stefan",
         dataUr: new Date(1892, 2, 30),
         dataSm: new Date(1945, 7, 31),
@@ -115,6 +120,7 @@ const naukowcy: Array<naukowiec> = [
     },
     {
         nazwisko: "Ignacy Łukasiewicz",
+        nazwiskoDopelniacz: "Ignacego Łukasiewicza",
         id: "ignacy",
         dataUr: new Date(1897, 11, 11),
         dataSm: new Date(1973, 2, 22),
