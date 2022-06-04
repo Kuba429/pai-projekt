@@ -7,6 +7,7 @@ export const Wydarzenia: Component<{ wydarzenia: Array<wydarzenie> }> = ({
 }) => {
     return (
         <>
+            {/* używam bootstrapowego komponentu accordion zamiast dropdown, ponieważ myślę, że w ten sposób dane są nieco bardziej czytelne*/}
             <div class="accordion " id={parentId}>
                 {wydarzenia.map((wydarzenie, i) => {
                     // index potrzebny do id

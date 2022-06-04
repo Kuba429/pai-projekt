@@ -4,8 +4,8 @@ import { naukowiec } from "../../dane";
 export const Kolumna1: Component<{ naukowiec: naukowiec }> = ({
     naukowiec,
 }) => {
-    const dataUrodzeniaFormat = ` ${naukowiec?.dataUr.getDay()}.${naukowiec?.dataUr.getMonth()}.${naukowiec?.dataUr.getFullYear()}`;
-    const dataSmierciFormat = ` ${naukowiec?.dataSm.getDay()}.${naukowiec?.dataSm.getMonth()}.${naukowiec?.dataSm.getFullYear()}`;
+    const dataUrodzeniaFormat = ` ${naukowiec?.dataUr.getDate()}.${naukowiec?.dataUr.getMonth()}.${naukowiec?.dataUr.getFullYear()}`;
+    const dataSmierciFormat = ` ${naukowiec?.dataSm.getDate()}.${naukowiec?.dataSm.getMonth()}.${naukowiec?.dataSm.getFullYear()}`;
     const [wiekSignal, setWiekSignal] = createSignal("");
     return (
         <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
@@ -25,13 +25,33 @@ export const Kolumna1: Component<{ naukowiec: naukowiec }> = ({
                         onClick={() => {
                             setWiekSignal(znajdzWiek(naukowiec).toString());
                         }}
-                        class="btn btn-secondary"
+                        class="btn btn-secondary my-2"
                     >
                         Oblicz wiek
                     </button>
                 )}
+                <br />
+                <button
+                    onClick={() => {
+                        ileMinelo(naukowiec.dataSm);
+                    }}
+                    class="btn btn-primary my-2"
+                >
+                    minęło
+                </button>
             </p>
         </div>
+    );
+};
+const ileMinelo = (data: Date) => {
+    // ile czasu minelo od 1970 do teraz - ile czasu minelo od 1970 do smierci
+    let roznica = new Date(new Date().getTime() - data.getTime());
+    // ile minęło:
+    let lat = roznica.getUTCFullYear() - 1970;
+    const miesiecy = roznica.getUTCMonth();
+    const dni = roznica.getUTCDate();
+    alert(
+        `Od śmierci naukowca minęło:\n lat: ${lat}\n miesięcy: ${miesiecy}\n dni: ${dni}`
     );
 };
 
