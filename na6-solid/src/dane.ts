@@ -122,8 +122,8 @@ const naukowcy: Array<naukowiec> = [
         nazwisko: "Ignacy Łukasiewicz",
         nazwiskoDopelniacz: "Ignacego Łukasiewicza",
         id: "ignacy",
-        dataUr: new Date(1897, 11, 11),
-        dataSm: new Date(1973, 2, 22),
+        dataUr: new Date(1822, 2, 8),
+        dataSm: new Date(1882, 0, 7),
         wikipedia: "https://pl.wikipedia.org/wiki/Ignacy_Łukasiewicz",
         zdjecie:
             "https://upload.wikimedia.org/wikipedia/commons/9/92/Ignacy_Lukasiewicz.jpg",
