@@ -4,8 +4,8 @@ import { naukowiec } from "../../dane";
 export const Kolumna1: Component<{ naukowiec: naukowiec }> = ({
     naukowiec,
 }) => {
-    const dataUrodzeniaFormat = ` ${naukowiec?.dataUr.getDate()}.${naukowiec?.dataUr.getMonth()}.${naukowiec?.dataUr.getFullYear()}`;
-    const dataSmierciFormat = ` ${naukowiec?.dataSm.getDate()}.${naukowiec?.dataSm.getMonth()}.${naukowiec?.dataSm.getFullYear()}`;
+    const dataUrodzeniaFormat = formatujDate(naukowiec.dataUr);
+    const dataSmierciFormat = formatujDate(naukowiec.dataSm);
     const [wiekSignal, setWiekSignal] = createSignal("");
     return (
         <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
@@ -47,14 +47,26 @@ const ileMinelo = (data: Date) => {
     // ile czasu minelo od 1970 do teraz - ile czasu minelo od 1970 do smierci
     let roznica = new Date(new Date().getTime() - data.getTime());
     // ile minęło:
-    let lat = roznica.getUTCFullYear() - 1970;
+    roznica.setUTCFullYear(roznica.getUTCFullYear() - 1970);
+    const lat = roznica.getUTCFullYear();
     const miesiecy = roznica.getUTCMonth();
     const dni = roznica.getUTCDate();
     alert(
         `Od śmierci naukowca minęło:\n lat: ${lat}\n miesięcy: ${miesiecy}\n dni: ${dni}`
     );
+    // w internecie można znaleźć "kalkulatory" liczące czas jaki minął pomiędzy 2 datami
+    // Wyniki w takich kalkulatorach różnią się od siebie, ponieważ niektóre czynniki są liczone inaczej (np. lata przestępne)
+    // Strona którą weryfikowałem poprawność działania funckji: https://www.thecalculatorsite.com/time/days-between-dates.php
 };
-
+const formatujDate = (data: Date): string => {
+    let dni = data.getDate().toString();
+    let miesiace = (data.getMonth() + 1).toString();
+    let lata = data.getFullYear();
+    // dodaj zera jeśli liczba jest jednocyfrowa
+    dni = dni.length == 1 ? "0" + dni : dni;
+    miesiace = miesiace.length == 1 ? "0" + miesiace : miesiace;
+    return ` ${dni}.${miesiace}.${lata}`;
+};
 export const Kolumna2: Component<{ opis: string; ciekawostka: string }> = ({
     opis,
     ciekawostka,
