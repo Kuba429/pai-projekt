@@ -1,5 +1,7 @@
 # PAI
 
+[Link do strony online](https://pai-jakubz.netlify.app/)
+
 Jak uruchomić lokalnie:
 **_Do działania aplikacji wymagany jest nodejs (i npm)_**
 
