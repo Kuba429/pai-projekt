@@ -6,6 +6,7 @@ import { Wydarzenia } from "./Wydarzenia";
 
 export const Naukowiec = () => {
     const { id } = useParams();
+    // znajdź naukowca po id znajdującym się w adresie
     const naukowiec: naukowiec = naukowcy.find((x) => x.id == id);
     return (
         <>

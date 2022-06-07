@@ -47,7 +47,7 @@ const ileMinelo = (data: Date) => {
     // ile czasu minelo od 1970 do teraz - ile czasu minelo od 1970 do smierci
     let roznica = new Date(new Date().getTime() - data.getTime());
     // ile minęło:
-    roznica.setUTCFullYear(roznica.getUTCFullYear() - 1970);
+    roznica.setUTCFullYear(roznica.getUTCFullYear() - 1970); // daty w js są liczone jako czas jaki minął od 1970
     const lat = roznica.getUTCFullYear();
     const miesiecy = roznica.getUTCMonth();
     const dni = roznica.getUTCDate();

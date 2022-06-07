@@ -8,7 +8,7 @@ export const Footer = () => {
                     target="blank"
                     class="text-center fs-3 link-secondary"
                 >
-                    <i class="bi bi-github "></i>
+                    <i class="bi bi-github"></i>
                 </a>
             </div>
         </footer>
